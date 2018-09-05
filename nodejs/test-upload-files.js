@@ -9,7 +9,7 @@ http.createServer((req, res) => {
 
         form.parse(req, (err, fields, files) => {
             const oldpath = files.filetoupload.path;
-            const newpath = '/mnt/c/Users/isaac.suarez/Documents/Proyectos/node-tutorial/public/' + files.filetoupload.name;
+            const newpath = 'PROJECT_DIRECTORY/public/' + files.filetoupload.name;
 
             mv(oldpath, newpath, (err) => {
                 if (err) throw err;
